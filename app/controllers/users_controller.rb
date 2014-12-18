@@ -36,7 +36,7 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    if params[:user][:username] = "vince"
+    if params[:user][:username] == "vince"
       params[:user][:role] = "admin"
       params.require(:user).permit(:username, :password, :time_zone, :role)
     else
